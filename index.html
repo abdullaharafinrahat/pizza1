@@ -34,6 +34,13 @@
     width: clamp(700px, 125vw, 1900px); /* oversized - extends past screen edges */
     height: auto;
     z-index: 2;
+    animation: spin 12s linear infinite; /* continuous rotation */
+  }
+
+  /* keep the translateX(-50%) centering while rotating */
+  @keyframes spin {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to   { transform: translateX(-50%) rotate(360deg); }
   }
 </style>
 </head>
